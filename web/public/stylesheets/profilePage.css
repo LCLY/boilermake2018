@@ -2,11 +2,22 @@
 	background: #434345;
 }
 
+.fill {
+  height: 100%;
+}
+
 #logowhite {
 	position: absolute;
 	width: 40px;
 	height: 40px;
 }
+
+.profile-logo-white {
+  /* position: fixed; */
+  width: 1rem;
+  height: 1rem;
+}
+
 #title {
 	font-weight: lighter;
 	padding-left: 50px;
@@ -70,8 +81,7 @@ h5 {
 	font-family: "Lato", 300, sans-serif;
 }
 .container {
-	padding-top: 0;
-
+	padding-top: 35px;
 }
 
 .control-label {
