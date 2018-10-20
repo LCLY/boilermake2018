@@ -14,8 +14,14 @@
 
 .profile-logo-white {
   /* position: fixed; */
-  width: 1rem;
-  height: 1rem;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+.message-log-white {
+  width: 2rem;
+  height: 2rem
 }
 
 #title {
@@ -29,15 +35,15 @@
 }
 
 .circle {
-	position: absolute;
-	width: 150px;
-	height: 150px;
+	width: 9rem;
+	height: 9rem;
 	border: solid black;
+	margin-top: 20px;
+	margin-left: 3rem;
+	margin-bottom: 20px;
 	border-radius: 70%;
-	display: flex;
-	align-items: right;
+	align-items: left;
 	color: #fff;
-	right: 260px;
 }
 
 #profilePhoto {
@@ -59,6 +65,41 @@
 	opacity: 0.5;
 	z-index: 1;
 	cursor: pointer;
+}
+
+#bio-full-name{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	color: #231f20
+}
+
+#bio-job-title {
+	color: #231f20;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 200
+}
+
+#quotes {
+	color: #231f20;
+	font-family: 'Open Sans', sans-serif;
+	font-style: italic
+}
+
+.experience {
+	color: #231f20;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#job-title {
+	color: #231f20;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600
+}
+
+.job-period {
+	font-family: 'Open Sans',sans-serif;
+	text-align: right;
+	color: #8c8e90
 }
 
 body {

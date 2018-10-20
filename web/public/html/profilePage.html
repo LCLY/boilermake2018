@@ -23,18 +23,18 @@
 
 
 <body>
+  <!-- Navigation bar, without working buttons -->
   <nav class="navbar navbar-expand-lg">
     <img id="logowhite" src="../assets/logo white.png" alt="Fliegen logo">
     <a id="title" class="navbar-brand disabled pt-0 pb-0 m-0"> FLIEGEN </a>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <img src="../assets/profile logo turquoise.png" alt="Fliegen logo" class="profile-logo-white pull-left img-responsive">
+          <img src="../assets/Profile logo white.png" alt="Profile Logo" class="profile-logo-white pull-left img-responsive">
         </li>
         <li class="nav-item">
-          <img src="../assets/logo white.png" alt="Fliegen logo" class="profile-logo-white pull-left img-responsive">
+          <img src="../assets/messages logo white.png" alt="Message Log logo" class="message-log-white pull-left img-responsive">
         </li>
-
       </ul>
     </div>
 
@@ -45,10 +45,14 @@
     <div class="card">
 
       <!-- Bio -->
-      <div class="card-body">
-        <h3 class="card-title">Full Name</h3>
-        <p class="card-text">Job Title</p>
-        <p class="card-text">"Wise wisdom quotes"</p>
+      <div class="row">
+        <div id="click" class="circle image"></div>
+        <div class="card-body">
+          <h3 class="card-title" id="bio-full-name">Full Name</h3>
+          <p class="card-text" id="bio-job-title">Job Title</p>
+          <div> </div>
+          <p class="card-text" id="quotes">"Wise wisdom quotes"</p>
+        </div>
       </div>
 
       <!-- Cut off line -->
@@ -56,27 +60,24 @@
 
       <div class="card-body">
         <!-- <h3 class="card-title">Full Name</h3> -->
-        <p class="card-text">Experience</p>
-        <h6 class="card-title">Prime minister of Malaysia</h6>
-        <p class="card-text">Loooooooooong descriptionLoooooooooong descriptionLoooooooooong descriptionLoooooooooong
+        <p class="card-text" class="experience">Experience</p>
+        <div class="container p-0">
+          <div class="row">
+            <div class="col-sm-8">
+              <h6 class="card-title job-title">Prime minister of Malaysia</h6>
+            </div>
+            <div class="col-sm-4">
+              <h6 class="card-title job-period">Jan 2009 - May 2018</h6>
+            </div>
+          </div>
+        </div>
+        <p class="card-text experience">Loooooooooong descriptionLoooooooooong descriptionLoooooooooong
+          descriptionLoooooooooong
           descriptionLoooooooooong descriptionLoooooooooong descriptionLoooooooooong descriptionLoooooooooong
           descriptionLoooooooooong description</p>
       </div>
 
     </div>
   </div>
-  <!-- <div class="container">
-    <form id="divForm" class="form-horizontal" role="form">
-      <h2 id="accountTitle">Create New Account</h2>
-      <hr class="my-1">
-      <h5>Account information</h5>
-      <div class="custom-file input-group">
-        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-        <label class="custom-file-label" for="inputGroupFile-1" id="profilePhoto">Choose profile picture</label>
-      </div>
-    </form>
-  </div> -->
-  <!--container-->
-
 
 </body>
