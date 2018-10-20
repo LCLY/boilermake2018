@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sign Up</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  <!--Google font-->
+  <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+    crossorigin="anonymous">
+
+  <!-- List.js framework-->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+
+
+  <link href="../stylesheets/chatProfessional.css" rel="stylesheet" type="text/css">
+  <script src="../javascript/../js/signInSeeker.js" type="text/javascript"></script>
+  <script src="../js/ratingStars.js" type="text/javascript"></script>
+</head>
+
+
+<body>
+  <!-- Navigation bar, without working buttons -->
+  <nav class="navbar navbar-expand-lg">
+    <img id="logowhite" src="../assets/logowhite.png" alt="Fliegen logo">
+    <a id="title" class="navbar-brand disabled pt-0 pb-0 m-0"> FLIEGEN </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <img src="../assets/profilelogowhite.png" alt="Profile Logo" class="profile-logo-white pull-left img-responsive">
+        </li>
+        <li class="nav-item">
+          <img src="../assets/messageslogowhite.png" alt="Message Log logo" class="message-log-white pull-left img-responsive">
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main container -->
+  <div class="container-fluid">
+    <h3 class="text-center">Chat</h3>
+    <div class="messaging">
+      <div class="inbox_msg">
+        <div class="inbox_people">
+          <div class="headind_srch">
+            <div class="recent_heading">
+              <h4>Recent</h4>
+            </div>
+
+            <!-- Ignore but do not delete!-->
+            <div class="srch_bar">
+              <div class="stylish-input-group">
+                <!-- <input type="text" class="search-bar" placeholder="Search"> -->
+                <span class="input-group-addon"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat left -->
+          <ul class="chat_list" style="list-style: none;">
+            <!-- LIST OF PEOPLE CHATS -->
+            <!-- wrap <div class="chat_list active_chat"> to get grey selected -->
+            <!-- Add js code here -->
+            <li class="chat-people-outer">
+              <div class="chat_people">
+                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="chat_ib">
+                  <h5>Andrew <span class="chat_date">Dec 25</span></h5>
+                  <p>Test, which is a new approach to have all solutions
+                    astrology under one roof.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="inbox_chat">
+
+
+
+          </div>
+        </div>
+        <div class="mesgs pt-0 d-flex flex-column">
+          <div class="p-2">
+            <!-- Conversation header -->
+            <div class="conversation_header">
+              <div class="conversation_heading">
+                <p id="conversation_title">Conversation with Zac Lim</p>
+              </div>
+            </div>
+
+            <!-- Message History -->
+            <div class="msg_history">
+              <div class="incoming_msg">
+                <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil">
+                </div>
+                <div class="received_msg">
+                  <div class="received_withd_msg">
+                    <p>Test which is a new approach to have all
+                      solutions</p>
+                    <span class="time_date"> 11:01 AM | June 9</span>
+                  </div>
+                </div>
+              </div>
+              <div class="outgoing_msg">
+                <div class="sent_msg">
+                  <p>Test which is a new approach to have all
+                    solutions</p>
+                  <span class="time_date"> 11:01 AM | June 9</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Send text field -->
+            <div class="type_msg fixed-top">
+              <div class="input_msg_write ">
+                <input type="text" class="write_msg" placeholder="Type a message" />
+                <button class="msg_send_btn" type="button"><i class="far fa-paper-plane"></i></button>
+              </div>
+            </div>
+
+            <!-- Rating -->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+              Rate The Professional Now!
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">
+                      How was your experience of this conversation?
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="star-rating">
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <input type="hidden" name="whatever1" class="rating-value" value="2.56">
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+</body>

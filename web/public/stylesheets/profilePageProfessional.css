@@ -1,0 +1,115 @@
+.navbar {
+	/* background: #434345; */
+	background-color: #00A998 
+}
+
+.fill {
+  height: 100%;
+}
+
+#logowhite {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+}
+
+.profile-logo-white {
+  /* position: fixed; */
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+.message-log-white {
+  width: 2rem;
+  height: 2rem
+}
+
+#title {
+	font-weight: lighter;
+	padding-left: 50px;
+	font-size: 28px;
+	color: white;
+	font-family: "Lato", 300, sans-serif;
+	transform: scale(1.1, 1);
+	letter-spacing: 0.1rem;
+}
+
+.circle {
+	width: 9rem;
+	height: 9rem;
+	border: solid black;
+	margin-top: 20px;
+	margin-left: 3rem;
+	margin-bottom: 20px;
+	border-radius: 70%;
+	align-items: left;
+	color: #fff;
+}
+
+#profilePhoto {
+	display: block;
+	position: absolute;
+	padding-top: 6px;
+	font-size: 16px;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 100;
+	right: 285px;
+	display: flex;
+	top: 350px;
+}
+.image {
+	content: url(../assets/cameraPhoto.png);
+}
+.circle:hover {
+	content: url(../assets/cameraPhoto.png);
+	opacity: 0.5;
+	z-index: 1;
+	cursor: pointer;
+}
+
+#bio-full-name{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	color: #231f20
+}
+
+#bio-job-title {
+	color: #231f20;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 200
+}
+
+#quotes {
+	color: #231f20;
+	font-family: 'Open Sans', sans-serif;
+	font-style: italic
+}
+
+.experience {
+	color: #231f20;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#job-title {
+	color: #231f20;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600
+}
+
+.job-period {
+	font-family: 'Open Sans',sans-serif;
+	text-align: right;
+	color: #8c8e90
+}
+
+body {
+	background: #e4e5e6 !important;
+}
+
+.container {
+	position: relative;
+	padding-top: 35px;
+	padding-bottom: 40px;
+}
+
