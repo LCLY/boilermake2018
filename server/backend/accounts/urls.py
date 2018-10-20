@@ -5,8 +5,7 @@ from accounts.views import seeker_login_view, professional_login_view, seeker_re
 
 
 urlpatterns = [
-
-    path('login/seeker', seeker_login_view),
+    path('login/seeker', seeker_login_view, ),
     path('login/professional', professional_login_view),
     path('register/seeker/', seeker_register_view),
     path('register/professional/', professional_register_view),
