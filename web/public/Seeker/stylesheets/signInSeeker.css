@@ -5,12 +5,13 @@
 
 body {
   background-image: url(../assets/login\ image.jpg);
-  background-size: 100%; 
+  /* Full height */
+  background-size: 100%;
 }
-
+/* 
 .card-body {
   background-color: "#53B5A8";
-}
+} */
 
 .card-signin {
   border: 0;
