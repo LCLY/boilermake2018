@@ -107,3 +107,9 @@ body {
 	background: #e4e5e6 !important;
 }
 
+.container {
+	position: relative;
+	padding-top: 35px;
+	padding-bottom: 40px;
+}
+
