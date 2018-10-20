@@ -1,0 +1,163 @@
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: .75rem;
+}
+
+body {
+  background-image: url(../assets/login\ image.jpg);
+  /* Full height */
+  background-size: 100%;
+}
+
+.text-center {
+  color: rgb(35, 31, 32);
+}
+
+#logo_white{
+  margin-left: 30px;
+}
+
+#seeker-btn {
+  margin-top: 1.3rem;
+  margin-left: 4rem;
+  margin-right: 3rem;
+  margin-bottom: 1.3rem;
+  color: rgba(67, 67, 69, 1);
+  font-family: 'Open Sans', sans-serif;
+}
+
+#professional-btn {
+  margin-top: 1.3rem;
+  margin-left: 4rem;
+  margin-bottom: 1.3rem;
+  color: rgba(0, 169, 152, 1);
+  font-family: 'Open Sans', sans-serif;
+}
+
+#professional-title {
+  margin-top: 1rem;
+}
+
+#seeker-title {
+  margin-top: 1rem;
+}
+
+.img-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  align-self: center;
+}
+
+.card{
+  background-color: rgba(255, 255, 255, 0.9)
+}
+
+.card-signin {
+  /* border: 0;
+  border-radius: 0; */
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.card-signin .card-title {
+  margin-bottom: 2rem;
+  font-weight: 200;
+  font-size: 2.5rem;
+  font-family: 'Lato', 400 , sans-serif;
+  letter-spacing: .1rem;
+}
+
+.card-signin .card-body {
+  padding: 2rem;
+}
+
+.form-signin {
+  width: 100%;
+}
+
+.form-signin .btn {
+  font-size: 80%;
+  /* border-radius: 5rem; */
+  letter-spacing: .1rem;
+  /* font-weight: bold; */
+  padding: 1rem;
+  transition: all 0.2s;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+.form-label-group>input,
+.form-label-group>label {
+  padding: var(--input-padding-y) var(--input-padding-x);
+}
+
+.form-label-group>label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+}
+
+/* .form-label-group input:not(:placeholder-shown) {
+  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+  padding-bottom: calc(var(--input-padding-y) / 3);
+} */
+
+.form-label-group input:not(:placeholder-shown)~label {
+  padding-top: calc(var(--input-padding-y) / 3);
+  padding-bottom: calc(var(--input-padding-y) / 3);
+  font-size: 12px;
+  color: #777;
+}
+
+
+.btn-primary {
+  font-family: 'Open Sans Bold', sans-serif;
+  font-weight: 900;
+  color: rgba(0, 169, 152, 1);
+  background-color: #ffffff;
+}
+
+.btn-forgetpassword {
+  margin-top: 1rem;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+}
+
+.btn-signup {
+  margin-top: 1rem;
+  margin-left: 9rem;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+}
+
+.btn-google {
+  color: white;
+  background-color: #ea4335;
+}
+
+.btn-facebook {
+  color: white;
+  background-color: #3b5998;
+}
