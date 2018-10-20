@@ -11,11 +11,36 @@ body {
 }
 
 .text-center {
-    color: white;
+    color: rgb(35, 31, 32);
 }
 
 #logo_white {
     margin-left: 30px;
+}
+
+#seeker-btn {
+    margin-top: 1.3rem;
+    margin-left: 4rem;
+    margin-right: 3rem;
+    margin-bottom: 1.3rem;
+    color: rgba(67, 67, 69, 1);
+    font-family: "Open Sans", sans-serif;
+}
+
+#professional-btn {
+    margin-top: 1.3rem;
+    margin-left: 4rem;
+    margin-bottom: 1.3rem;
+    color: rgba(0, 169, 152, 1);
+    font-family: "Open Sans", sans-serif;
+}
+
+#professional-title {
+    margin-top: 1rem;
+}
+
+#seeker-title {
+    margin-top: 1rem;
 }
 
 .img-logo {
@@ -27,8 +52,7 @@ body {
 }
 
 .card {
-    /* background-color: rgba(0, 169, 152, 0.8) */
-    background-color: rgba(67, 67, 69, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .card-signin {
@@ -47,11 +71,6 @@ body {
 
 .card-signin .card-body {
     padding: 2rem;
-}
-
-::placeholder {
-    color: #ffffff;
-    opacity: 1;
 }
 
 .form-signin {
@@ -110,27 +129,10 @@ body {
     color: #777;
 }
 
-.form-control::-webkit-input-placeholder {
-    color: white;
-} /* WebKit, Blink, Edge */
-.form-control:-moz-placeholder {
-    color: white;
-} /* Mozilla Firefox 4 to 18 */
-.form-control::-moz-placeholder {
-    color: white;
-} /* Mozilla Firefox 19+ */
-.form-control:-ms-input-placeholder {
-    color: white;
-} /* Internet Explorer 10-11 */
-.form-control::-ms-input-placeholder {
-    color: white;
-} /* Microsoft Edge */
-
 .btn-primary {
     font-family: "Open Sans Bold", sans-serif;
     font-weight: 900;
-    /* color: rgba(0, 169, 152, 1); */
-    color: rgba(67, 67, 69, 0.8);
+    color: rgba(0, 169, 152, 1);
     background-color: #ffffff;
 }
 
