@@ -16,33 +16,20 @@
 	transform: scale(1.1, 1);
 	letter-spacing: 0.1rem;
 }
-
+/* circle div */
 .circle {
 	position: absolute;
 	width: 150px;
 	height: 150px;
 	border: solid black;
 	border-radius: 70%;
-	display: flex;
+	/* display: flex; */
 	align-items: right;
 	color: #fff;
-	right: 260px;
+	/* margin-left: 700px; */
+	right: 200px;
 }
 
-#profilePhoto {
-	display: block;
-	position: absolute;
-	padding-top: 6px;
-	font-size: 16px;
-	font-family: "Open Sans", sans-serif;
-	font-weight: 100;
-	right: 285px;
-	display: flex;
-	top: 350px;
-}
-.image {
-	content: url(../assets/cameraPhoto.png);
-}
 .circle:hover {
 	content: url(../assets/cameraPhoto.png);
 	opacity: 0.5;
@@ -50,6 +37,38 @@
 	cursor: pointer;
 }
 
+.image {
+	content: url(../assets/cameraPhoto.png);
+}
+
+/* profile picture */
+#inputProfilePhoto {
+	position: absolute;
+	display: block;
+	padding-top: 6px;
+	font-size: 12px;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 100;
+	right: 160px;
+	width: 210px;
+	display: flex;
+	top: 300px;
+}
+
+/* input for upload photo */
+#labelProfilePhoto {
+	position: absolute;
+	right: 160px;
+	width: 210px;
+}
+
+#inputGroupFile01 {
+	/* position: absolute;
+	left: 100px;
+	width: 200px; */
+}
+
+/* changing the background color*/
 body {
 	background: #e4e5e6 !important;
 }
@@ -70,7 +89,9 @@ h5 {
 	font-family: "Lato", 300, sans-serif;
 }
 .container {
+	position: relative;
 	padding-top: 35px;
+	padding-bottom: 40px;
 }
 
 .control-label {
@@ -86,28 +107,10 @@ h5 {
 	margin-left: auto;
 	margin-right: auto;
 }
+
 .form-group {
 	padding-left: 25px;
 }
 .form-control {
 	width: 350px;
-}
-
-.upload-button {
-	padding: 4px;
-	border: 1px solid black;
-	border-radius: 5px;
-	display: block;
-	float: left;
-}
-
-.profile-pic {
-	z-index: 3;
-	max-width: 200px;
-	max-height: 200px;
-	display: block;
-}
-
-.file-upload {
-	display: none;
 }

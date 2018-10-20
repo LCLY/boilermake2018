@@ -31,106 +31,96 @@
             <span class="navbar-toggler-icon"></span>
         </button>
     </nav>
-    <div class="input-group mb-3">
 
-        <div class="custom-file">
-            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-        </div>
-    </div>
     <div class="container">
         <form id="divForm" class="form-horizontal" role="form">
             <h2 id="accountTitle">Create New Account</h2>
             <hr class="my-1">
             <h5>Account information</h5>
-            <div class="custom-file input-group">
-                <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                <label class="custom-file-label" for="inputGroupFile-1" id="profilePhoto">Choose profile picture</label>
-            </div>
-            <div id="click" class="circle image">
+            <div class="form-group row">
+                <label for="email" class="col-sm-3 control-label">* Email</label>
+                <div class="col-sm-auto m-0">
+                    <input type="email" id="email" placeholder="e.g. example@gmail.com" class="form-control" required
+                        autofocus>
+                </div>
 
+                <div class="input-group mb-3" id="inputProfilePhoto">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                        <label id="labelProfilePhoto" class="custom-file-label" for="inputGroupFile01">Choose profile
+                            picture</label>
+                    </div>
+                </div>
+                <div id="click" class="circle image"></div>
             </div>
             <div class="form-group row">
-                <label for="firstName" class="col-sm-3 control-label">* Email</label>
-                <div class="col-sm-8 m-0">
-                    <input type="email" id="email" placeholder="Email" class="form-control" required autofocus>
+                <label for="password" class="col-sm-3 control-label">* Password</label>
+                <div class="col-sm-auto">
+                    <input type="password" id="password" placeholder="Type password here" class="form-control"
+                        autofocus>
                 </div>
             </div>
             <div class="form-group row">
-                <label for="lastName" class="col-sm-3 control-label">* Password</label>
-                <div class="col-sm-9">
-                    <input type="password" id="password" placeholder="Password" class="form-control" autofocus>
+                <label for="confirmPassword" class="col-sm-3 control-label">* Confirm Password </label>
+                <div class="col-sm-auto">
+                    <input type="password" id="confirmPassword" placeholder="Type confirm password here" class="form-control"
+                        name="email">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="email" class="col-sm-3 control-label">* Confirm Password </label>
-                <div class="col-sm-9">
-                    <input type="password" id="email" placeholder="Confirm Password" class="form-control" name="email">
+                <label for="firstname" class="col-sm-3 control-label">* First Name</label>
+                <div class="col-sm-auto">
+                    <input type="text" id="firstname" placeholder="Type first name here" class="form-control">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="password" class="col-sm-3 control-label">* First Name</label>
-                <div class="col-sm-9">
-                    <input type="text" id="password" placeholder="First Name" class="form-control">
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="password" class="col-sm-3 control-label">* Last Name</label>
-                <div class="col-sm-9">
-                    <input type="text" id="password" placeholder="Last Name" class="form-control">
+                <label for="lastname" class="col-sm-3 control-label">* Last Name</label>
+                <div class="col-sm-auto">
+                    <input type="text" id="lastname" placeholder="Type last name here" class="form-control">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="birthDate" class="col-sm-3 control-label">* Date of Birth</label>
-                <div class="col-sm-9">
+                <div class="col-sm-auto">
                     <input type="date" id="birthDate" class="form-control">
                 </div>
             </div>
-            <div class="form-group">
-                <label for="phoneNumber" class="col-sm-3 control-label">Phone number </label>
-                <div class="col-sm-9">
-                    <input type="phoneNumber" id="phoneNumber" placeholder="Phone number" class="form-control">
-                    <span class="help-block">Your phone number won't be disclosed anywhere </span>
+            <div class="form-group row">
+                <label for="phoneNumber" class="col-sm-3 control-label">* Phone number </label>
+                <div class="col-sm-auto">
+                    <input type="phoneNumber" id="phoneNumber" placeholder="e.g. 0123456789" class="form-control">
                 </div>
             </div>
-            <div class="form-group">
-                <label for="Height" class="col-sm-3 control-label">Height* </label>
-                <div class="col-sm-9">
-                    <input type="number" id="height" placeholder="Please write your height in centimetres" class="form-control">
+
+            <h5>Personal information</h5>
+            <div class="form-group row">
+                <label for="country" class="col-sm-3 control-label">* Country </label>
+                <div class="col-sm-auto">
+                    <input type="text" id="country" placeholder="Type your country here" class="form-control" required>
                 </div>
             </div>
-            <div class="form-group">
-                <label for="weight" class="col-sm-3 control-label">Weight* </label>
-                <div class="col-sm-9">
-                    <input type="number" id="weight" placeholder="Please write your weight in kilograms" class="form-control">
+            <div class="form-group row">
+                <label for="state" class="col-sm-3 control-label">* State </label>
+                <div class="col-sm-auto">
+                    <input type="text" id="state" placeholder="Type your state here" class="form-control" required>
                 </div>
             </div>
-            <div class="form-group">
-                <label class="control-label col-sm-3">Gender</label>
-                <div class="col-sm-6">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <label class="radio-inline">
-                                <input type="radio" id="femaleRadio" value="Female">Female
-                            </label>
-                        </div>
-                        <div class="col-sm-4">
-                            <label class="radio-inline">
-                                <input type="radio" id="maleRadio" value="Male">Male
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- /.form-group -->
-            <div class="form-group">
-                <div class="col-sm-9 col-sm-offset-3">
-                    <span class="help-block">*Required fields</span>
+            <div class="form-group row">
+                <label for="area" class="col-sm-3 control-label">Area </label>
+                <div class="col-sm-auto">
+                    <input type="text" id="area" placeholder="" class="form-control">
                 </div>
             </div>
+            <div class="form-group row">
+                <label class="control-label col-sm-3"> * Required fields</label>
+            </div>
+
+
             <button type="submit" class="btn btn-primary btn-block">Register</button>
         </form> <!-- /form -->
     </div>
     <!--container-->
 
-
 </body>
+
+</html>
