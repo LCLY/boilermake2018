@@ -6,12 +6,12 @@ const crypto = require("crypto-js/sha3");
 const router = express.Router();
 
 router.get("/seeker", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/signInSeeker.html"));
+    res.sendFile(path.join(__dirname, "../public/html/signUpSeeker.html"));
 });
 
 router.get("/professional", function(req, res) {
     res.sendFile(
-        path.join(__dirname, "../public/html/signInProfessional.html"),
+        path.join(__dirname, "../public/html/signUpProfessional.html"),
     );
 });
 
