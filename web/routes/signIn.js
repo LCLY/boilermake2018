@@ -20,15 +20,15 @@ router.get("/professional", function(req, res) {
 });
 
 router.post("/seeker", function(req, res) {
-    // var data = {
-    //     email: "sample@gmail.com",
-    //     password: crypto(req.body.email + req.body.password).toString(),
-    // };
-    // console.log(data);
-    // var body = {
-    //     result: 0,
-    // };
-    // res.send(body);
+    var data = {
+        email: "sample@gmail.com",
+        password: crypto(req.body.email + req.body.password).toString(),
+    };
+    console.log(data);
+    var body = {
+        result: 0,
+    };
+    res.send(body);
     // var options = {
     //     uri: "http://localhost:8080/user/login",
     //     json: data,
