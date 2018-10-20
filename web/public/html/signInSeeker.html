@@ -17,7 +17,7 @@
 
   <!--css and js-->
   <link href="../stylesheets/signInSeeker.css" rel="stylesheet" type="text/css">
-  <script src="../javascript/signInSeeker.js" type="text/javascript"></script>
+  <script src="../js/signInSeeker.js" type="text/javascript"></script>
 
 </head>
 
@@ -31,25 +31,18 @@
               <img src="../assets/logo white.png" width="120" height="120" class="p-0" id="logo_white" />
             </div>
             <h5 class="card-title text-center">FLIEGEN</h5>
-            <form class="form-signin">
+            <form id="signInForm" class="form-signin">
               <div class="form-label-group">
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
-                <!-- <label for="inputEmail">Email address</label> -->
               </div>
 
               <div class="form-label-group">
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                <!-- <label for="inputPassword">Password</label> -->
               </div>
 
-              <!-- Remember Me Checkbox -->
-              <!-- <div class="custom-control custom-checkbox mb-3">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">Remember password</label>
-              </div> -->
               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">LOG IN</button>
-              <button class="btn btn-link btn-forgetpassword p-0" type="submit">Forget your password?</button>
-              <button class="btn btn-link btn-signup p-0" type="submit">Sign up</button>
+              <button class="btn btn-link btn-forgetpassword p-0">Forget your password?</button>
+              <button class="btn btn-link btn-signup p-0" href="/signUp/seeker" href="/signUp/seeker">Sign up</button>
 
               <hr class="my-4">
               <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i>
