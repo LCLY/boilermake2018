@@ -5,8 +5,8 @@ $(document).ready(function() {
         $.post(
             "/signIn/seeker",
             {
-                email: $("#emailSignIn").val(),
-                password: $("#passwordSignIn").val(),
+                email: $("#inputEmail").val(),
+                password: $("#inputPassword").val(),
             },
             function(res) {
                 switch (res.result) {
