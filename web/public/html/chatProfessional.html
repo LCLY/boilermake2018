@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Sign Up</title>
+  <title>Chat</title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
@@ -32,17 +32,22 @@
 
 
 <body>
-  <!-- Navigation bar, without working buttons -->
   <nav class="navbar navbar-expand-lg">
     <img id="logowhite" src="../assets/logowhite.png" alt="Fliegen logo">
-    <a id="title" class="navbar-brand pt-0 pb-0 m-0" href="/home"> FLIEGEN </a>
+    <a id="title" class="navbar-brand nav-link pt-0 pb-0 m-0" href="/home"> FLIEGEN </a>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <img src="../assets/profilelogowhite.png" alt="Profile Logo" class="profile-logo-white pull-left img-responsive">
+          <!-- go to profile-->
+          <a class="nav-link" href="/profilePage/seeker">
+            <img src="../assets/profilelogowhite.png" alt="Profile Logo" class="profile-logo-white pull-left img-responsive">
+          </a>
         </li>
-        <li class="nav-item">
-          <img src="../assets/messageslogowhite.png" alt="Message Log logo" class="message-log-white pull-left img-responsive">
+        <li class="nav-item ">
+          <!-- go to message -->
+          <a class="nav-link" href="/chat/seeker">
+            <img src="../assets/messageslogowhite.png" alt="Message Log logo" class="message-log-white pull-left img-responsive">
+          </a>
         </li>
       </ul>
     </div>
