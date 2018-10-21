@@ -1,4 +1,46 @@
 $(document).ready(function () {
+ $("#email1").html("asdasd");
+                    $("#email2").html("qwe");
+                    $("#email3").html("qwrwq");
+                    $("#email4").html("ertert");
+                    $("#email1").html("");
+                    $("#email1").html("");
+                    $("#email1").html("");
+                    $("#email1").html("");
+                    $("#email1").html("");
+                    $("#email1").html("");
+                    $("#firstname1").html("");
+                    $("#firstname1").html("");
+                    $("#firstname1").html("");
+                    $("#firstname1").html("");
+                    $("#firstname1").html("");
+                    $("#firstname1").html("");
+                    $("#firstname1").html("");
+                    $("#firstname1").html("");
+                    $("#firstname1").html("");
+                    $("#firstname1").html("");
+                    $("#firstname1").html("");
+                    $("#lastname1").html("");
+                    $("#lastname1").html("");
+                    $("#lastname1").html("");
+                    $("#lastname1").html("");
+                    $("#lastname1").html("");
+                    $("#lastname1").html("");
+                    $("#lastname1").html("");
+                    $("#lastname1").html("");
+                    $("#lastname1").html("");
+                    $("#lastname1").html("");
+                    $("#lastname1").html("");
+                    $("profession1").html("");
+                    $("profession1").html("");
+ $("profession1").html("");
+ $("profession1").html("");
+ $("profession1").html("");
+ $("profession1").html("");
+ $("profession1").html("");
+ $("profession1").html("");
+ $("profession1").html("");
+ $("profession1").html("");
     $.post(
         "/home/seeker",
         {
@@ -12,40 +54,7 @@ $(document).ready(function () {
                     //     var action = "/show/seeker/professional";
                     //     $("#signInForm").attr("action", action);
                     // });
-                    $("#email1")
-                    $("#email1")
-                    $("#email1")
-                    $("#email1")
-                    $("#email1")
-                    $("#email1")
-                    $("#email1")
-                    $("#email1")
-                    $("#email1")
-                    $("#email1")
-                    $("#firstname1")
-                    $("#firstname1")
-                    $("#firstname1")
-                    $("#firstname1")
-                    $("#firstname1")
-                    $("#firstname1")
-                    $("#firstname1")
-                    $("#firstname1")
-                    $("#firstname1")
-                    $("#firstname1")
-                    $("#firstname1")
-                    $("#lastname1")
-                    $("#lastname1")
-                    $("#lastname1")
-                    $("#lastname1")
-                    $("#lastname1")
-                    $("#lastname1")
-                    $("#lastname1")
-                    $("#lastname1")
-                    $("#lastname1")
-                    $("#lastname1")
-                    $("#lastname1")
-                    $("profession1")
-                    $("profession1")
+                   
                     
                     console.log("result" + res.result);                   
                     break;
