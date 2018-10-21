@@ -48,49 +48,60 @@
     </nav>
 
     <div class="container">
-        <div class="card">
-            <ul class="professional_list pl-3 pt-3 pr-3" style="list-style: none;">
-                <li class="chat-people-outer  col-6 m-0">
-                    <div class="chat_people row">
-                        <div class="chat_img">
-                            <img src="https://ptetutorials.com/images/user-profile.png" height="80rem" width="80rem">
-                        </div>
-                        <div class="chat_ib pl-3 pt-3">
-                            <h5>Andrew</h5>
-                            <p>Sophomore student in Purdue</p>
-                        </div>
-                        <div style="position:absolute; left:25rem; padding-top: 5px" class="button-logo">
+        <ul class="list list-group list-group flush ml-auto mr-auto" style="width:50%;height:20%">
+            <li class="list-group-item">
+                <div class="row">
+                    <img class="ml-4" src="https://ptetutorials.com/images/user-profile.png" height="100px" width="100px">
+                    <div class="col-sm-2 offset-sm-1">
+
+
+                    </div>
+                    <div class="row">
+                        <div class="offset-md-4" style="padding-left:250px;">
                             <img src="../assets/profilelogoturquoise.png" width="50rem" height="50rem">
                         </div>
-                        <div style="position:absolute; right:2rem; padding-top: 5px" class="button-logo2">
+                        <div class=" pl-2">
                             <img src="../assets/messages logo turquoise.png" width="50rem" height="50rem">
                         </div>
                     </div>
-                </li>
+                </div>
 
-                <li class="chat-people-outer  col-6 m-0">
-                    <div class="chat_people row">
-                        <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" height="80rem"
-                                width="80rem"></div>
-                        <div class="chat_ib pl-3 pt-3">
-                            <h5>Andrew</h5>
-                            <p>Sophomore student in Purdue</p>
-                        </div>
-                        <div style="position:absolute; left:25rem; padding-top: 5px" class="button-logo">
-                            <img src="../assets/profilelogoturquoise.png" width="50rem" height="50rem">
-                        </div>
-                        <div style="position:absolute; right:2rem; padding-top: 5px" class="button-logo2">
-                            <img src="../assets/messages logo turquoise.png" width="50rem" height="50rem">
+            <li class="list-group-item items flex-column align-items-start pl-2 pr-2 border-0" ondblclick=getPassengerCode(this)>
+                <div class="card" style="width:700px; height:150px;" id="users">
+                    <div class="card-body">
+                        <div class="row" style="font-size:20px">
+                            <div class="col-3">
+                                <img class="ml-4" src="https://ptetutorials.com/images/user-profile.png" height="100px"
+                                    width="100px">
+                            </div>
+                            <div class="col-5">
+                                <div class="row">
+                                    <h5 class="pr-2 mt-2">Name: </h5>
+                                    <h5 class="
+                                        pr-2 mt-2" name="firstname">First</h5>
+                                    <h5 class=" mt-2" name="lastname"> Last</h5>
+                                </div>
+                                <div class="row">
+                                    <p class="pr-2">Email: </p>
+                                    <p name="email">something@gmail.com</p>
+                                </div>
+                                <div class="row">
+                                    <p class="">Phone: </p>
+                                    <p name="phone">56498498</p>
+                                </div>
+                            </div>
+                            <div class="col-4"> test </div>
                         </div>
                     </div>
-                </li>
-            </ul>
-
-
-            <!-- Cut off line -->
-            <hr class="my-1">
-
-        </div>
-    </div>
-
+            </li>
+        </ul>
+    </div> <!-- Cut off line -->
 </body>
+
+</html>
+
+<!-- to generate dynamic -->
+<!-- <div id="myRideOfferList" class="myRideOfferList">
+    <h5 id="myRideOfferListTitle" class="p-3 m-0">My Ride Offers</h5>
+    <ul class="list list-group list-group-flush"></ul>
+</div> -->
