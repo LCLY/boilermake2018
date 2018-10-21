@@ -16,29 +16,39 @@ router.get("/professional", function(req, res) {
 });
 
 router.post("/seeker", function(req, res) {
-    var data = {
-        email: req.body.email,
-        password: crypto(req.body.email + req.body.password).toString(),
+    var body = {
+        result: 0,
     };
-    console.log(data);
-    var options = {
-        uri: "http://localhost:8080/something",
-        json: data,
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-    };
-    request(options, function(error, response) {
-        // global.cookie = response.headers["set-cookie"];
-        if (response) {
-            res.send(response.body);
-        }
-        return;
-    });
+
+    res.send(body);
+    // var data = {
+    //     email: req.body.email,
+    //     password: crypto(req.body.email + req.body.password).toString(),
+    // };
+    // console.log(data);
+    // var options = {
+    //     uri: "http://localhost:8080/something",
+    //     json: data,
+    //     method: "POST",
+    //     headers: {
+    //         "Content-Type": "application/json",
+    //     },
+    // };
+    // request(options, function(error, response) {
+    //     // global.cookie = response.headers["set-cookie"];
+    //     if (response) {
+    //         res.send(response.body);
+    //     }
+    //     return;
+    // });
 });
 
 router.post("/professional", function(req, res) {
+    var body = {
+        result: 0,
+    };
+
+    res.send(body);
     //     var data = {
     //         email: req.body.email,
     //         password: crypto(req.body.email + req.body.password).toString(),
