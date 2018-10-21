@@ -24,26 +24,22 @@ router.post("/seeker", function(req, res) {
         email: "sample@gmail.com",
         password: crypto(req.body.email + req.body.password).toString(),
     };
-    console.log(data);
-    var body = {
-        result: 0,
+
+    var options = {
+        uri: "http://localhost:8080/persons",
+        json: data,
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
     };
-    res.send(body);
-    // var options = {
-    //     uri: "http://localhost:8080/user/login",
-    //     json: data,
-    //     method: "POST",
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //     },
-    // };
-    // request(options, function(error, response) {
-    //     global.cookie = response.headers["set-cookie"];
-    //     if (response) {
-    //         res.send(response.body);
-    //     }
-    //     return;
-    // });
+    request(options, function(error, response) {
+        global.cookie = response.headers["set-cookie"];
+        if (response) {
+            res.send(response.body);
+        }
+        return;
+    });
 });
 
 router.post("/professional", function(req, res) {
