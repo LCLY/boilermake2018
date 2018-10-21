@@ -136,65 +136,81 @@
               </div>
             </div>
 
-            <!-- Send text field -->
-            <div class="type_msg fixed-top">
-              <div class="input_msg_write ">
-                <input type="text" class="write_msg" placeholder="Type a message" />
-                <button class="msg_send_btn" type="button"><i class="far fa-paper-plane"></i></button>
-              </div>
-            </div>
+            <!-- Text Field Area -->
+            <div class="container">
+              <div class="row">
 
-            <!-- Rating -->
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-              Rate the conversation
-            </button>
+                <!-- Attatchment -->
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
+                  <i class="fas fa-paperclip"></i>
+                </button>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-              aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">
-                      How was your experience of this conversation?
-                    </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
+                <!-- Rating -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
+                  <i class="fas fa-star"></i>
+                </button>
 
-                  <div class="form-group" id="rating-ability-wrapper">
-                    <label class="control-label" for="rating">
-                      <span class="field-label-info"></span>
-                      <input type="hidden" id="selected_rating" name="selected_rating" value="" required="required">
-                    </label>
-                    <h2 class="bold rating-header" style="">
-                    </h2>
-                    <button type="button" class="btnrating btn btn-default btn-lg" data-attr="1" id="rating-star-1">
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                    </button>
-                    <button type="button" class="btnrating btn btn-default btn-lg" data-attr="2" id="rating-star-2">
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                    </button>
-                    <button type="button" class="btnrating btn btn-default btn-lg" data-attr="3" id="rating-star-3">
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                    </button>
-                    <button type="button" class="btnrating btn btn-default btn-lg" data-attr="4" id="rating-star-4">
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                    </button>
-                    <button type="button" class="btnrating btn btn-default btn-lg" data-attr="5" id="rating-star-5">
-                      <i class="fa fa-star" aria-hidden="true"></i>
-                    </button>
-                  </div>
-
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">
+                          How was your experience of this conversation?
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="form-group" id="rating-ability-wrapper">
+                        <label class="control-label" for="rating">
+                          <span class="field-label-info"></span>
+                          <input type="hidden" id="selected_rating" name="selected_rating" value="" required="required">
+                        </label>
+                        <h2 class="bold rating-header" style="">
+                        </h2>
+                        <button type="button" class="btnrating btn btn-default btn-lg" data-attr="1" id="rating-star-1">
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btnrating btn btn-default btn-lg" data-attr="2" id="rating-star-2">
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btnrating btn btn-default btn-lg" data-attr="3" id="rating-star-3">
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btnrating btn btn-default btn-lg" data-attr="4" id="rating-star-4">
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btnrating btn btn-default btn-lg" data-attr="5" id="rating-star-5">
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                        </button>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
+
+                <!-- rating end -->
+                <div class="message_input_area">
+                  <!-- Send text field -->
+                  <div class="type_msg fixed-top">
+                    <div class="input_msg_write ">
+                      <input type="text" class="write_msg" placeholder="Type a message" />
+                      <button class="msg_send_btn" type="button"><i class="far fa-paper-plane"></i></button>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
+
+            <!-- End text input area -->
+
 
           </div>
         </div>

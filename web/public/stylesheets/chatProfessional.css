@@ -187,7 +187,8 @@ img {
 }
 
 .type_msg {
-    border-top: 1px solid #c4c4c4;
+    border: 1px solid #c4c4c4;
+    border-radius: 0.5rem;
     position: relative;
 }
 .msg_send_btn {
@@ -203,6 +204,12 @@ img {
     top: 11px;
     width: 33px;
 }
+
+.message_input_area{
+    width: 89%;
+
+}
+
 .messaging {
     padding: 0 0 50px 0;
 }
