@@ -11,7 +11,7 @@ $(document).ready(function() {
                 switch (res.result) {
                     case 0: {
                         console.log("result" + res.result);
-                        window.location.href = "/profilePage/seeker";
+                        window.location.href = "/home/seeker";
                         break;
                     }
                     case 1: {
