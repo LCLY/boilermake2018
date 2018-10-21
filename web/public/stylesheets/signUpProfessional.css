@@ -1,0 +1,116 @@
+.navbar {
+    background: #434345;
+}
+
+#logowhite {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+#title {
+    font-weight: lighter;
+    padding-left: 50px;
+    font-size: 28px;
+    color: white;
+    font-family: "Lato", 300, sans-serif;
+    transform: scale(1.1, 1);
+    letter-spacing: 0.1rem;
+}
+/* circle div */
+.circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: solid black;
+    border-radius: 70%;
+    /* display: flex; */
+    align-items: right;
+    color: #fff;
+    /* margin-left: 700px; */
+    right: 200px;
+}
+
+.circle:hover {
+    content: url(../assets/cameraPhoto.png);
+    opacity: 0.5;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.image {
+    content: url(../assets/cameraPhoto.png);
+}
+
+/* profile picture */
+#inputProfilePhoto {
+    position: absolute;
+    display: block;
+    padding-top: 6px;
+    font-size: 12px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+    right: 160px;
+    width: 210px;
+    display: flex;
+    top: 300px;
+}
+
+/* input for upload photo */
+#labelProfilePhoto {
+    position: absolute;
+    right: 160px;
+    width: 210px;
+}
+
+#inputGroupFile01 {
+    /* position: absolute;
+	left: 100px;
+	width: 200px; */
+}
+
+/* changing the background color*/
+body {
+    background: #e4e5e6 !important;
+}
+
+h5 {
+    color: #231f20;
+    font-family: "Lato", sans-serif;
+    font-size: 23px;
+    padding-top: 10px;
+    padding-left: 25px;
+}
+
+#accountTitle {
+    padding-top: 10px;
+    padding-left: 15px;
+    font-size: 29px;
+    font-weight: normal;
+    font-family: "Lato", 300, sans-serif;
+}
+.container {
+    position: relative;
+    padding-top: 35px;
+    padding-bottom: 40px;
+}
+
+.control-label {
+    padding-top: 6px;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+}
+
+#divForm {
+    background-color: white;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group {
+    padding-left: 25px;
+}
+.form-control {
+    width: 350px;
+}

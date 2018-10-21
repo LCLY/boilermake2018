@@ -26,8 +26,21 @@ app.use("/chat", chat);
 
 // http setup for local testing
 const httpServer = http.createServer(app);
-const port = 3000;
+const port = 80;
 
 httpServer.listen(port, () => {
     console.log("Server running on port " + port);
 });
+
+// const hostname = "127.0.0.1";
+// const port = 3000;
+
+// const server = http.createServer((req, res) => {
+//     res.statusCode = 200;
+//     res.setHeader("Content-Type", "text/plain");
+//     res.end("Hello World\n");
+// });
+
+// server.listen(port, hostname, () => {
+//     console.log(`Server running at http://${hostname}:${port}/`);
+// });
