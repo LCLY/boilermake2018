@@ -26,7 +26,7 @@ router.post("/seeker", function(req, res) {
     };
 
     var options = {
-        uri: "http://localhost:8080/persons",
+        uri: "http://localhost:8080/login/jobseekers",
         json: data,
         method: "POST",
         headers: {
@@ -43,30 +43,27 @@ router.post("/seeker", function(req, res) {
 });
 
 router.post("/professional", function(req, res) {
-    // var data = {
-    //     email: "sample@gmail.com",
-    //     password: crypto(req.body.email + req.body.password).toString(),
-    // };
-    // console.log(data);
-    var body = {
-        result: 0,
+    var data = {
+        email: "sample@gmail.com",
+        password: crypto(req.body.email + req.body.password).toString(),
     };
-    res.send(body);
-    // var options = {
-    //     uri: "http://localhost:8080/user/login",
-    //     json: data,
-    //     method: "POST",
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //     },
-    // };
-    // request(options, function(error, response) {
-    //     global.cookie = response.headers["set-cookie"];
-    //     if (response) {
-    //         res.send(response.body);
-    //     }
-    //     return;
-    // });
+    console.log(data);
+
+    var options = {
+        uri: "http://localhost:8080/login/jobseekers",
+        json: data,
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    };
+    request(options, function(error, response) {
+        global.cookie = response.headers["set-cookie"];
+        if (response) {
+            res.send(response.body);
+        }
+        return;
+    });
 });
 
 module.exports = router;
