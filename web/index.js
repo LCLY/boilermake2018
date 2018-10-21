@@ -70,59 +70,6 @@ app.post("/auth/signin/seeker", function(req, res) {
             return res.json({ result: 2, message: "email incorrect" });
         }
     });
-    // db.close(err => {
-    //     if (err) {
-    //         console.error(err.message);
-    //     }
-    //     console.log("Close the database connection.");
-    // });
-    // });
-});
-
-app.post("/auth/signin/seeker", function(req, res) {
-    console.log(req.body);
-    var email = req.body.email;
-    console.log("email: " + email);
-
-    var password = req.body.password;
-    console.log("pw: " + password);
-
-    var userid = -1;
-    let sql = "SELECT email, password FROM seeker";
-    // db.serialize(function() {
-    db.all(sql, (err, rows) => {
-        if (err) {
-            console.error(err.message);
-            throw err;
-        }
-        // console.log("Come in db function");
-        var email_exists = 0;
-        rows.forEach(row => {
-            if (rows.length <= 0) {
-                return res.json({ result: 2 });
-            }
-            console.log("retrieved from database: " + row.email);
-            console.log("retrieved from database: " + row.password);
-            //     // if username is valid, return success with 200 status code
-            if (email === row.email && password === row.password) {
-                email_exists = 1;
-                return res.json({ result: 0, message: "sign in success" }); //success
-            } else if (email === row.email && password != row.password) {
-                email_exists = 1;
-                return res.json({ result: 1, message: "password incorrect" });
-            }
-        });
-        if (email_exists === 0) {
-            return res.json({ result: 2, message: "email incorrect" });
-        }
-    });
-    // db.close(err => {
-    //     if (err) {
-    //         console.error(err.message);
-    //     }
-    //     console.log("Close the database connection.");
-    // });
-    // });
 });
 
 app.post("/auth/signin/professional", function(req, res) {
@@ -134,7 +81,7 @@ app.post("/auth/signin/professional", function(req, res) {
     console.log("pw: " + password);
 
     var userid = -1;
-    let sql = "SELECT email, password FROM seeker";
+    let sql = "SELECT email, password FROM professional";
     // db.serialize(function() {
     db.all(sql, (err, rows) => {
         if (err) {
@@ -164,16 +111,12 @@ app.post("/auth/signin/professional", function(req, res) {
     });
 });
 
-app.post("/auth/signin/professional", function(req, res) {
-    console.log(req.body);
-    var email = req.body.email;
-    console.log("email: " + email);
+//show professional on seeker page
+app.post("/show/seeker/professional", function(req, res) {
+    var sid = res.body.sid;
+    console.log("Comes into show seeker" + sid);
 
-    var password = req.body.password;
-    console.log("pw: " + password);
-
-    var userid = -1;
-    let sql = "SELECT email, password FROM seeker";
+    let sql = "SELECT firstname, lastname, email, profession FROM professional";
     // db.serialize(function() {
     db.all(sql, (err, rows) => {
         if (err) {
@@ -181,27 +124,62 @@ app.post("/auth/signin/professional", function(req, res) {
             throw err;
         }
         // console.log("Come in db function");
-        var email_exists = 0;
         rows.forEach(row => {
             if (rows.length <= 0) {
                 return res.json({ result: 2 });
             }
             console.log("retrieved from database: " + row.email);
-            console.log("retrieved from database: " + row.password);
-            //     // if username is valid, return success with 200 status code
-            if (email === row.email && password === row.password) {
-                email_exists = 1;
-                return res.json({ result: 0, message: "sign in success" }); //success
-            } else if (email === row.email && password != row.password) {
-                email_exists = 1;
-                return res.json({ result: 1, message: "password incorrect" });
-            }
+            console.log("retrieved from database: " + row.firstname);
+            console.log("retrieved from database: " + row.lastname);
+            return res.json({
+                result: 0,
+                email: row.email,
+                firstname: row.firstname,
+                lastname: row.lastname,
+                profession: row.profession,
+            });
         });
-        if (email_exists === 0) {
-            return res.json({ result: 2, message: "email incorrect" });
-        }
     });
 });
+
+// app.post("/show/professional/onhomepage", function(req, res) {
+//     console.log(req.body);
+//     var email = req.body.email;
+//     console.log("email: " + email);
+
+//     var password = req.body.password;
+//     console.log("pw: " + password);
+
+//     var userid = -1;
+//     let sql = "SELECT email, password FROM seeker";
+//     // db.serialize(function() {
+//     db.all(sql, (err, rows) => {
+//         if (err) {
+//             console.error(err.message);
+//             throw err;
+//         }
+//         // console.log("Come in db function");
+//         var email_exists = 0;
+//         rows.forEach(row => {
+//             if (rows.length <= 0) {
+//                 return res.json({ result: 2 });
+//             }
+//             console.log("retrieved from database: " + row.email);
+//             console.log("retrieved from database: " + row.password);
+//             //     // if username is valid, return success with 200 status code
+//             if (email === row.email && password === row.password) {
+//                 email_exists = 1;
+//                 return res.json({ result: 0, message: "sign in success" }); //success
+//             } else if (email === row.email && password != row.password) {
+//                 email_exists = 1;
+//                 return res.json({ result: 1, message: "password incorrect" });
+//             }
+//         });
+//         if (email_exists === 0) {
+//             return res.json({ result: 2, message: "email incorrect" });
+//         }
+//     });
+// });
 
 // http setup for local testing
 const httpServer = http.createServer(app);

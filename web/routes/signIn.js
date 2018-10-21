@@ -42,30 +42,28 @@ router.post("/seeker", function(req, res) {
 });
 
 router.post("/professional", function(req, res) {
-    var body = {
-        result: 0,
+    // var body = {
+    //     result: 0,
+    // };
+    // res.send(body);
+    var data = {
+        email: req.body.email,
+        password: req.body.password,
     };
-    res.send(body);
-    // var data = {
-    //     email: req.body.email,
-    //     password: crypto(req.body.email + req.body.password).toString(),
-    // };
-    // console.log(data);
+    console.log(data);
 
-    // var options = {
-    //     uri: "http://localhost:8000/accounts/login/jobseekers",
-    //     json: data,
-    //     method: "POST",
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //     },
-    // };
-    // request(options, function(error, response) {
-    //     if (response) {
-    //         res.send(response.body);
-    //     }
-    //     return;
-    // });
+    var options = {
+        uri: "http://localhost:3000/auth/signin/professional",
+        json: data,
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+    };
+    request(options, function(error, response) {
+        if (response) {
+            res.send(response.body);
+        }
+        return;
+    });
 });
 
 module.exports = router;

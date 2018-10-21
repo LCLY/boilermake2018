@@ -2,7 +2,7 @@ $(document).ready(function() {
     $("#signInForm").submit(function(data) {
         data.preventDefault();
         $.post(
-            "/signIn/seeker",
+            "/signIn/professional",
             {
                 email: $("#inputEmail").val(),
                 password: $("#inputPassword").val(),

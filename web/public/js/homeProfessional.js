@@ -2,7 +2,7 @@ $(document).ready(function() {
     $.post(
         "/home/professional",
         {
-            pid: "0",
+            sid: "0",
         },
         function(res) {
             switch (res.result) {
