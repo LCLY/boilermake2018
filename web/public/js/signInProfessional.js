@@ -21,7 +21,7 @@ $(document).ready(function() {
                             }),
                         );
 
-                        window.location.href = "/profilePage/professional";
+                        window.location.href = "/home/professional";
                         break;
                     }
                     case 1: {
