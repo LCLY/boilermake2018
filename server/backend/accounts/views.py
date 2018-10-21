@@ -25,8 +25,6 @@ def seeker_login_view(request):
     context = {
         'form': form,
     }
-    print(username)
-    print(password)
     return render(request, "signInSeeker.html", context)
 
 def professional_login_view(request):
