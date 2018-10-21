@@ -21,18 +21,17 @@ router.get("/professional", function(req, res) {
 
 router.post("/seeker", function(req, res) {
     var data = {
-        email: "sample@gmail.com",
+        email: req.body.email,
         password: crypto(req.body.email + req.body.password).toString(),
     };
 
     var options = {
-        uri: "http://localhost:8080/accounts/login/jobseekers",
+        uri: "http://localhost:8000/accounts/login/jobseekers",
         json: data,
         method: "POST",
         headers: { "Content-Type": "application/json" },
     };
     request(options, function(error, response) {
-        global.cookie = response.headers["set-cookie"];
         if (response) {
             res.send(response.body);
         }
@@ -42,13 +41,13 @@ router.post("/seeker", function(req, res) {
 
 router.post("/professional", function(req, res) {
     var data = {
-        email: "sample@gmail.com",
+        email: req.body.email,
         password: crypto(req.body.email + req.body.password).toString(),
     };
     console.log(data);
 
     var options = {
-        uri: "http://localhost:8080/accounts/login/jobseekers",
+        uri: "http://localhost:8000/accounts/login/jobseekers",
         json: data,
         method: "POST",
         headers: {
@@ -56,7 +55,6 @@ router.post("/professional", function(req, res) {
         },
     };
     request(options, function(error, response) {
-        global.cookie = response.headers["set-cookie"];
         if (response) {
             res.send(response.body);
         }

@@ -11,16 +11,16 @@ $(document).ready(function() {
             function(res) {
                 switch (res.result) {
                     case 0: {
-                        localStorage.key = "credentials";
-                        localStorage.setItem(
-                            "credentials",
-                            JSON.stringify({
-                                status: res.status,
-                                userid: res.userid,
-                                email: $("#emailSignIn").val(),
-                            }),
-                        );
-
+                        // localStorage.key = "credentials";
+                        // localStorage.setItem(
+                        //     "credentials",
+                        //     JSON.stringify({
+                        //         status: res.status,
+                        //         userid: res.userid,
+                        //         email: $("#emailSignIn").val(),
+                        //     }),
+                        // );
+                        console.log(res.result);
                         window.location.href = "/profilePage/seeker";
                         break;
                     }
