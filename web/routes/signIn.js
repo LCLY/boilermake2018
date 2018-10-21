@@ -26,12 +26,10 @@ router.post("/seeker", function(req, res) {
     };
 
     var options = {
-        uri: "http://localhost:8080/login/jobseekers",
+        uri: "http://localhost:8080/accounts/login/jobseekers",
         json: data,
         method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
     };
     request(options, function(error, response) {
         global.cookie = response.headers["set-cookie"];
@@ -50,7 +48,7 @@ router.post("/professional", function(req, res) {
     console.log(data);
 
     var options = {
-        uri: "http://localhost:8080/login/jobseekers",
+        uri: "http://localhost:8080/accounts/login/jobseekers",
         json: data,
         method: "POST",
         headers: {
