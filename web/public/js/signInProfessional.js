@@ -1,9 +1,8 @@
 $(document).ready(function() {
     $("#signInForm").submit(function(data) {
         data.preventDefault();
-
         $.post(
-            "/signIn/professional",
+            "/signIn/seeker",
             {
                 email: $("#inputEmail").val(),
                 password: $("#inputPassword").val(),
@@ -11,26 +10,20 @@ $(document).ready(function() {
             function(res) {
                 switch (res.result) {
                     case 0: {
-                        localStorage.key = "credentials";
-                        localStorage.setItem(
-                            "credentials",
-                            JSON.stringify({
-                                status: res.status,
-                                userid: res.userid,
-                                email: $("#emailSignIn").val(),
-                            }),
-                        );
-
+                        console.log("result" + res.result);
                         window.location.href = "/home/professional";
                         break;
                     }
                     case 1: {
-                        alert("User does not exist.");
+                        alert("Incorrect password");
                         break;
                     }
                     case 2: {
-                        alert("Invalid password.");
+                        alert("Incorrect credentials");
                         break;
+                    }
+                    default: {
+                        alert("some kind of error");
                     }
                 }
             },

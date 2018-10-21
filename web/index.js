@@ -79,35 +79,129 @@ app.post("/auth/signin/seeker", function(req, res) {
     // });
 });
 
-app.get("/auth/signin/seeker", function(req, res) {
-    res.send(req);
+app.post("/auth/signin/seeker", function(req, res) {
+    console.log(req.body);
+    var email = req.body.email;
+    console.log("email: " + email);
+
+    var password = req.body.password;
+    console.log("pw: " + password);
+
+    var userid = -1;
+    let sql = "SELECT email, password FROM seeker";
+    // db.serialize(function() {
+    db.all(sql, (err, rows) => {
+        if (err) {
+            console.error(err.message);
+            throw err;
+        }
+        // console.log("Come in db function");
+        var email_exists = 0;
+        rows.forEach(row => {
+            if (rows.length <= 0) {
+                return res.json({ result: 2 });
+            }
+            console.log("retrieved from database: " + row.email);
+            console.log("retrieved from database: " + row.password);
+            //     // if username is valid, return success with 200 status code
+            if (email === row.email && password === row.password) {
+                email_exists = 1;
+                return res.json({ result: 0, message: "sign in success" }); //success
+            } else if (email === row.email && password != row.password) {
+                email_exists = 1;
+                return res.json({ result: 1, message: "password incorrect" });
+            }
+        });
+        if (email_exists === 0) {
+            return res.json({ result: 2, message: "email incorrect" });
+        }
+    });
+    // db.close(err => {
+    //     if (err) {
+    //         console.error(err.message);
+    //     }
+    //     console.log("Close the database connection.");
+    // });
+    // });
 });
 
-//     var currentQuery =
-//         "SELECT sid FROM seeker WHERE email='" +
-//         email +
-//         "' AND password='" +
-//         password +
-//         "'";
-//     db.all(currentQuery, function(err, rows) {
-//         if (err) {
-//             return res.status(500).json({ message: "Internal server error" });
-//         } else {
-//             //if the username or password is missing return invalid data with 400 status code
-//             if (rows.length <= 0) {
-//                 return res.status(400).json({ message: "invalid_data" });
-//             }
+app.post("/auth/signin/professional", function(req, res) {
+    console.log(req.body);
+    var email = req.body.email;
+    console.log("email: " + email);
 
-//             //if username is valid, return success with 200 status code
-//             if (userid === rows[0].sid) {
-//                 return res.status(200).json({ sid: userid });
-//             } else {
-//                 //if username password present but incorrect, return invalid credentials with 401 status code
-//                 return res.status(401).json({ message: "invalid_credentials" });
-//             }
-//         }
-//     });
-// });
+    var password = req.body.password;
+    console.log("pw: " + password);
+
+    var userid = -1;
+    let sql = "SELECT email, password FROM seeker";
+    // db.serialize(function() {
+    db.all(sql, (err, rows) => {
+        if (err) {
+            console.error(err.message);
+            throw err;
+        }
+        // console.log("Come in db function");
+        var email_exists = 0;
+        rows.forEach(row => {
+            if (rows.length <= 0) {
+                return res.json({ result: 2 });
+            }
+            console.log("retrieved from database: " + row.email);
+            console.log("retrieved from database: " + row.password);
+            //     // if username is valid, return success with 200 status code
+            if (email === row.email && password === row.password) {
+                email_exists = 1;
+                return res.json({ result: 0, message: "sign in success" }); //success
+            } else if (email === row.email && password != row.password) {
+                email_exists = 1;
+                return res.json({ result: 1, message: "password incorrect" });
+            }
+        });
+        if (email_exists === 0) {
+            return res.json({ result: 2, message: "email incorrect" });
+        }
+    });
+});
+
+app.post("/auth/signin/professional", function(req, res) {
+    console.log(req.body);
+    var email = req.body.email;
+    console.log("email: " + email);
+
+    var password = req.body.password;
+    console.log("pw: " + password);
+
+    var userid = -1;
+    let sql = "SELECT email, password FROM seeker";
+    // db.serialize(function() {
+    db.all(sql, (err, rows) => {
+        if (err) {
+            console.error(err.message);
+            throw err;
+        }
+        // console.log("Come in db function");
+        var email_exists = 0;
+        rows.forEach(row => {
+            if (rows.length <= 0) {
+                return res.json({ result: 2 });
+            }
+            console.log("retrieved from database: " + row.email);
+            console.log("retrieved from database: " + row.password);
+            //     // if username is valid, return success with 200 status code
+            if (email === row.email && password === row.password) {
+                email_exists = 1;
+                return res.json({ result: 0, message: "sign in success" }); //success
+            } else if (email === row.email && password != row.password) {
+                email_exists = 1;
+                return res.json({ result: 1, message: "password incorrect" });
+            }
+        });
+        if (email_exists === 0) {
+            return res.json({ result: 2, message: "email incorrect" });
+        }
+    });
+});
 
 // http setup for local testing
 const httpServer = http.createServer(app);
